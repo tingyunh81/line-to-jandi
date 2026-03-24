@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: line-to-jandi
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: LINE_CHANNEL_SECRET
+        value: 75d79a38393c3ee0bf8951e204a20784
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        value: zaKLU8IpRSBu5+IspPUFnVTqqzdPUXbv6IGOpxAmMfBR67zXBeGGwuV4qJQkp5fyNRWqwyExRkOmrTjHT10YrZdFT5C1Bq8C6N+KZ6P4oyYnIZ7cGpbSQqXbUcqRBsMLpnWG1kMKmr6OqxOmRLsxDwdB04t89/1O/w1cDnyiIFU=
+      - key: JANDI_WEBHOOK_URL
+        value: https://wh.jandi.com/connect-api/webhook/28028081/2a8f1c152cf5022bb3c972db68f0c56f
